@@ -1,19 +1,15 @@
 package io.codelex.arithmetic.practice;
 
-import io.codelex.NoCodeWrittenException;
-
-import java.math.BigDecimal;
-
 class Geometry {
-    static double areaOfCircle(BigDecimal radius) {
-        throw new NoCodeWrittenException();
+    static double areaOfCircle(double radius) {
+        return Math.PI * (radius * radius);
     }
 
-    static double areaOfRectangle(BigDecimal length, BigDecimal width) {
-        throw new NoCodeWrittenException();
+    static double areaOfRectangle(double length, double width) {
+        return width * length;
     }
 
-    static double areaOfTriangle(BigDecimal base, BigDecimal h) {
-        throw new NoCodeWrittenException();
+    static double areaOfTriangle(double base, double height) {
+        return (height * base) / 2;
     }
 }
