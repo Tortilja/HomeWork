@@ -1,5 +1,4 @@
 package io.codelex.classesandobjects.practice.videostore;
-
 import java.util.Scanner;
 
 public class VideoStoreTest {
@@ -7,6 +6,7 @@ public class VideoStoreTest {
 
     public static void main(String[] args) {
         final Scanner keyboard = new Scanner(System.in);
+        VideoStore videoStore = new VideoStore();
 
         while (true) {
             System.out.println("Choose the operation you want to perform ");
@@ -21,36 +21,40 @@ public class VideoStoreTest {
                 case 0:
                     System.exit(0);
                 case 1:
-                    fillVideoStore(keyboard);
+                    fillVideoStore(keyboard, videoStore);
                     break;
                 case 2:
-                    rentVideo(keyboard);
+                    rentVideo(keyboard, videoStore);
                     break;
                 case 3:
-                    returnVideo(keyboard);
+                    returnVideo(keyboard, videoStore);
                     break;
                 default:
                     break;
             }
-
         }
     }
 
-    private static void fillVideoStore(Scanner scanner) {
+    private static void fillVideoStore(Scanner scanner, VideoStore videoStore) {
         for (int i = 0; i < COUNT_OF_MOVIES; i++) {
             System.out.println("Enter movie name");
             String movieName = scanner.next();
             System.out.println("Enter rating");
-            int rating = scanner.nextInt();
-            //todo - add video
+            double rating = scanner.nextDouble();
+            videoStore.addVideo(movieName);
+            videoStore.receiveRating(movieName, rating);
         }
     }
 
-    private static void rentVideo(Scanner scanner) {
-        //todo - rent video
+    private static void rentVideo(Scanner scanner, VideoStore videoStore) {
+        System.out.println("Enter movie name");
+        String movieName = scanner.next();
+        videoStore.checkOut(movieName);
     }
 
-    private static void returnVideo(Scanner scanner) {
-        //todo - return video
+    private static void returnVideo(Scanner scanner, VideoStore videoStore) {
+        System.out.println("Enter movie name");
+        String movieName = scanner.next();
+        videoStore.returnVideo(movieName);
     }
 }
