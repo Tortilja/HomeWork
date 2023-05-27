@@ -12,7 +12,7 @@ public class CalculateArea {
         do {
             // Get the user's menu choice.
             choice = getMenu();
-
+    
             if (choice == 1) {
                 calculateCircleArea();
             } else if (choice == 2) {
