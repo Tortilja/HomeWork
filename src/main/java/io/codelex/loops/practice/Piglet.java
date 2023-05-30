@@ -14,28 +14,28 @@ public class Piglet {
 
         System.out.println("Welcome to Piglet");
 
-        while (role){
-            int randomNumber = rand.nextInt(6)+1;
+        while (role) {
+            int randomNumber = rand.nextInt(6) + 1;
             System.out.println("You rolled a: " + randomNumber + "!");
 
-            if(randomNumber > 1 ){
+            if (randomNumber > 1) {
                 score += randomNumber;
                 System.out.print("Roll Again? (Yes/No)");
                 String userInput = in.next();
 
-                    while (!userInput.equals("Yes") && !userInput.equals("No")){
-                        System.out.print("Type only Yes or No!");
-                        userInput = in.next();
-                    }
-                    if(userInput.equals("No")){
-                        role = false;
-                    }
-            }else {
+                while (!userInput.equals("Yes") && !userInput.equals("No")) {
+                    System.out.print("Type only Yes or No!");
+                    userInput = in.next();
+                }
+                if (userInput.equals("No")) {
+                    role = false;
+                }
+            } else {
                 score = 0;
                 role = false;
             }
         }
 
-        System.out.println("Your got a " + score +  " points.");
+        System.out.println("Your got a " + score + " points.");
     }
 }

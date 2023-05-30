@@ -20,7 +20,7 @@ public class RandomNumberPositions {
         boolean foundIt = false;
 
         for (i = 0; i < integers.length; i++) {
-            if(integers[i] == searchFor){
+            if (integers[i] == searchFor) {
                 foundIt = true;
                 break;
             }

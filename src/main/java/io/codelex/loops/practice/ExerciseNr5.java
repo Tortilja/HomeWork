@@ -12,14 +12,12 @@ public class ExerciseNr5 {
 
         int charCount = 0;
 
-        for (int i = 0; i < firstString.length(); i++) {
-            charCount++;
-        }
-        for (int i = 0; i < secondString.length(); i++) {
+        for (int i = 0; i < firstString.length() + secondString.length(); i++) {
             charCount++;
         }
 
-        int dotNeeded = 20 - charCount;
+
+        int dotNeeded = 30 - charCount;
 
         System.out.print(firstString);
 
