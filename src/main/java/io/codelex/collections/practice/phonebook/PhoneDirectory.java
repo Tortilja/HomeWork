@@ -1,8 +1,6 @@
 package io.codelex.collections.practice.phonebook;
 
-import java.util.Arrays;
-
-public class PhoneDirectory {
+import java.util.Arrays;public class PhoneDirectory {
     private PhoneEntry[] data;
     private int dataCount;
 
@@ -47,5 +45,6 @@ public class PhoneDirectory {
             dataCount++;
         }
     }
+
 
 }
