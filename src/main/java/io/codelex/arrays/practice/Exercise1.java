@@ -20,15 +20,5 @@ public class Exercise1 {
                 "C++"
         };
 
-        /*
-        fixme
-        System.out.println("Original numeric array : " + .........);
-        ........... //Sort array
-        System.out.println("Sorted numeric array : " + .........);
-
-        System.out.println("Original string array : " + .........);
-        ......... //Sort array
-        System.out.println("Sorted string array : " + .........);
-        */
     }
 }
